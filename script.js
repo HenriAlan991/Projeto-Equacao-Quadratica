@@ -15,9 +15,14 @@ function calcular(a,b,c){
         let resultado = [x]
         return resultado
     }
+    else if(delta < 0){
+        let status = `Esta equação não possui raízes reais!`
+        let resultado = [status]
+        return resultado
+    }
 }
 
-let resultado = calcular(1, -6, 9)
+let resultado = calcular(0,1,2)
 
 if (resultado.length == 2){
     let x1 = resultado[0]
@@ -25,6 +30,13 @@ if (resultado.length == 2){
     console.log(x1, x2)
 }
 else if(resultado.length == 1){
-    let x = resultado[0]
-    console.log(x)
+    resultado = resultado[0]
+
+    if(typeof resultado == `number`){
+    let x = resultado
+    console.log(x)}
+    else{
+        console.log(resultado)
+
+    }
 }
