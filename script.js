@@ -19,12 +19,12 @@ function calcular(a,b,c){
 
 let resultado = calcular(1, -6, 9)
 
-if (resultado.length = 2){
+if (resultado.length == 2){
     let x1 = resultado[0]
     let x2 = resultado[1]
     console.log(x1, x2)
 }
-else if(resultado.length = 1){
+else if(resultado.length == 1){
     let x = resultado[0]
     console.log(x)
 }
