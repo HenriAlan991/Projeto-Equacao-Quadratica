@@ -1,6 +1,13 @@
 function calcular(a,b,c){
     const delta = (b**2) - (4 * a * c)
-
+    if (a==0){
+        a = b
+        b = c 
+        let x = (- b) / (a)
+        let resultado = [x]
+        return resultado
+    }
+    else{
     if (delta > 0){
         let x1 = ((-b) + (delta**0.5)) / (2*a)
         let x2 = ((-b) - (delta**0.5)) / (2*a)
@@ -19,7 +26,7 @@ function calcular(a,b,c){
         let status = `Esta equação não possui raízes reais!`
         let resultado = [status]
         return resultado
-    }
+    }}
 }
 
 let resultado = calcular(0,1,2)
