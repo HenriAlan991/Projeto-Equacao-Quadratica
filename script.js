@@ -1,3 +1,6 @@
+let p1 = document.getElementById(`solucao1`)
+let p2 = document.getElementById(`solucao2`)
+
 function calcular(a,b,c){
     const delta = (b**2) - (4 * a * c)
     if (a==0){
@@ -29,21 +32,23 @@ function calcular(a,b,c){
     }}
 }
 
-let resultado = calcular(0,1,2)
+let resultado = calcular(5,4,-12)
 
 if (resultado.length == 2){
     let x1 = resultado[0]
     let x2 = resultado[1]
-    console.log(x1, x2)
+    p1.innerHTML = `${x1}`
+    p2.innerHTML = `${x2}`
 }
 else if(resultado.length == 1){
     resultado = resultado[0]
 
     if(typeof resultado == `number`){
     let x = resultado
-    console.log(x)}
+    p1.innerHTML = `${x}`
+}
     else{
-        console.log(resultado)
+        p1.innerHTML = `${resultado}`
 
     }
 }
